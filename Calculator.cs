@@ -82,6 +82,10 @@ namespace Calculatour
             }
 
             Display.Text = s;
+            if(Display.Text == "-")
+            {
+                Display.Text = String.Empty;
+            }
         }
 
         private void buttonSign_Click(object sender, EventArgs e)
@@ -92,17 +96,15 @@ namespace Calculatour
             {
                 string s = Display.Text;
                 int ss = Int32.Parse(s);
-                bool min = s.Substring(0, 1) == "-";
-                if (min)
-                {
+                
+                
+                
                     ss *= -1;
                     Display.Text = ss.ToString();
 
-                }
-                else
-                {
-                    Display.Text = "-" + Display.Text;
-                }
+                
+                
+                
             }
             catch
             {
