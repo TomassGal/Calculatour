@@ -39,6 +39,9 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
+            this.buttonDecimal = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonSign = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Display
@@ -57,6 +60,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "n";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button0_Click);
             // 
             // button2
             // 
@@ -66,6 +70,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "i";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button0_Click);
             // 
             // button3
             // 
@@ -75,6 +80,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "g";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button0_Click);
             // 
             // button4
             // 
@@ -84,6 +90,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "gg";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button0_Click);
             // 
             // button5
             // 
@@ -93,6 +100,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "a";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button0_Click);
             // 
             // button6
             // 
@@ -102,6 +110,7 @@
             this.button6.TabIndex = 6;
             this.button6.Text = "f";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button0_Click);
             // 
             // button7
             // 
@@ -111,6 +120,7 @@
             this.button7.TabIndex = 7;
             this.button7.Text = "g";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button0_Click);
             // 
             // button8
             // 
@@ -120,6 +130,7 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "g";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button0_Click);
             // 
             // button9
             // 
@@ -129,6 +140,7 @@
             this.button9.TabIndex = 9;
             this.button9.Text = "hh";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button0_Click);
             // 
             // button0
             // 
@@ -138,12 +150,47 @@
             this.button0.TabIndex = 10;
             this.button0.Text = "kokoko";
             this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.button0_Click);
+            // 
+            // buttonDecimal
+            // 
+            this.buttonDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonDecimal.Location = new System.Drawing.Point(168, 280);
+            this.buttonDecimal.Name = "buttonDecimal";
+            this.buttonDecimal.Size = new System.Drawing.Size(72, 61);
+            this.buttonDecimal.TabIndex = 11;
+            this.buttonDecimal.Text = ".";
+            this.buttonDecimal.UseVisualStyleBackColor = true;
+            this.buttonDecimal.Click += new System.EventHandler(this.buttonDecimal_Click);
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(291, 81);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(72, 61);
+            this.buttonBack.TabIndex = 12;
+            this.buttonBack.Text = "BackSpace";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // buttonSign
+            // 
+            this.buttonSign.Location = new System.Drawing.Point(12, 280);
+            this.buttonSign.Name = "buttonSign";
+            this.buttonSign.Size = new System.Drawing.Size(72, 61);
+            this.buttonSign.TabIndex = 13;
+            this.buttonSign.Text = "-/+";
+            this.buttonSign.UseVisualStyleBackColor = true;
+            this.buttonSign.Click += new System.EventHandler(this.buttonSign_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 450);
+            this.Controls.Add(this.buttonSign);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.buttonDecimal);
             this.Controls.Add(this.button0);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -175,6 +222,9 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button0;
+        private System.Windows.Forms.Button buttonDecimal;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonSign;
     }
 }
 
