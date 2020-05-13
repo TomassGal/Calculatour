@@ -13,6 +13,9 @@ namespace Calculatour
 {
     public partial class Calculator : Form
     {
+        double num1 = 0;
+        double num2 = 0;
+        string operation = null;
         public Calculator()
         {
             InitializeComponent();
@@ -95,7 +98,7 @@ namespace Calculatour
             try
             {
                 string s = Display.Text;
-                int ss = Int32.Parse(s);
+                double ss = Convert.ToDouble(s);
                 
                 
                 
@@ -110,6 +113,59 @@ namespace Calculatour
             {
                 MessageBox.Show("Cant make blank to negative");
             }
+            
+        }
+
+        private void Oparation_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                num1 = Convert.ToDouble(Display.Text);
+                
+                Button buttin = (Button)sender;
+                operation = buttin.Text;
+                Display.Text += buttin.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Cant be blank");
+            }
+            
+        }
+
+        private void ButtonEuq_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                num2 = Convert.ToDouble(Display.Text);
+                if (operation == "+")
+                {
+                    Display.Text = (num1 + num2).ToString();
+                }
+                if (operation == "-")
+                {
+                    Display.Text = (num1 - num2).ToString();
+                }
+                if (operation == "x")
+                {
+                    Display.Text = (num1 * num2).ToString();
+                }
+                if (operation == ":")
+                {
+                    Display.Text = (num1 / num2).ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Invalid numbers");
+            }
+            
+            
+            
+        }
+
+        private void buttonSub_Click(object sender, EventArgs e)
+        {
             
         }
     }

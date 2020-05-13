@@ -42,6 +42,11 @@
             this.buttonDecimal = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonSign = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonSub = new System.Windows.Forms.Button();
+            this.buttonMul = new System.Windows.Forms.Button();
+            this.buttonDiv = new System.Windows.Forms.Button();
+            this.ButtonEuq = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Display
@@ -154,13 +159,14 @@
             // 
             // buttonDecimal
             // 
+            this.buttonDecimal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonDecimal.Location = new System.Drawing.Point(168, 280);
             this.buttonDecimal.Name = "buttonDecimal";
             this.buttonDecimal.Size = new System.Drawing.Size(72, 61);
             this.buttonDecimal.TabIndex = 11;
             this.buttonDecimal.Text = ".";
-            this.buttonDecimal.UseVisualStyleBackColor = true;
+            this.buttonDecimal.UseVisualStyleBackColor = false;
             this.buttonDecimal.Click += new System.EventHandler(this.buttonDecimal_Click);
             // 
             // buttonBack
@@ -175,19 +181,80 @@
             // 
             // buttonSign
             // 
+            this.buttonSign.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonSign.Location = new System.Drawing.Point(12, 280);
             this.buttonSign.Name = "buttonSign";
             this.buttonSign.Size = new System.Drawing.Size(72, 61);
             this.buttonSign.TabIndex = 13;
             this.buttonSign.Text = "-/+";
-            this.buttonSign.UseVisualStyleBackColor = true;
+            this.buttonSign.UseVisualStyleBackColor = false;
             this.buttonSign.Click += new System.EventHandler(this.buttonSign_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonAdd.Location = new System.Drawing.Point(246, 215);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(72, 61);
+            this.buttonAdd.TabIndex = 14;
+            this.buttonAdd.Text = "+";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.Oparation_Click);
+            // 
+            // buttonSub
+            // 
+            this.buttonSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonSub.Location = new System.Drawing.Point(324, 280);
+            this.buttonSub.Name = "buttonSub";
+            this.buttonSub.Size = new System.Drawing.Size(72, 61);
+            this.buttonSub.TabIndex = 15;
+            this.buttonSub.Text = "-";
+            this.buttonSub.UseVisualStyleBackColor = true;
+            this.buttonSub.Click += new System.EventHandler(this.Oparation_Click);
+            // 
+            // buttonMul
+            // 
+            this.buttonMul.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonMul.Location = new System.Drawing.Point(246, 280);
+            this.buttonMul.Name = "buttonMul";
+            this.buttonMul.Size = new System.Drawing.Size(72, 61);
+            this.buttonMul.TabIndex = 16;
+            this.buttonMul.Text = "x";
+            this.buttonMul.UseVisualStyleBackColor = true;
+            this.buttonMul.Click += new System.EventHandler(this.Oparation_Click);
+            // 
+            // buttonDiv
+            // 
+            this.buttonDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonDiv.Location = new System.Drawing.Point(324, 215);
+            this.buttonDiv.Name = "buttonDiv";
+            this.buttonDiv.Size = new System.Drawing.Size(72, 61);
+            this.buttonDiv.TabIndex = 17;
+            this.buttonDiv.Text = ":";
+            this.buttonDiv.UseVisualStyleBackColor = true;
+            this.buttonDiv.Click += new System.EventHandler(this.Oparation_Click);
+            // 
+            // ButtonEuq
+            // 
+            this.ButtonEuq.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.ButtonEuq.Location = new System.Drawing.Point(12, 347);
+            this.ButtonEuq.Name = "ButtonEuq";
+            this.ButtonEuq.Size = new System.Drawing.Size(384, 91);
+            this.ButtonEuq.TabIndex = 18;
+            this.ButtonEuq.Text = "=\r\n";
+            this.ButtonEuq.UseVisualStyleBackColor = true;
+            this.ButtonEuq.Click += new System.EventHandler(this.ButtonEuq_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 450);
+            this.Controls.Add(this.ButtonEuq);
+            this.Controls.Add(this.buttonDiv);
+            this.Controls.Add(this.buttonMul);
+            this.Controls.Add(this.buttonSub);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonSign);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDecimal);
@@ -225,6 +292,11 @@
         private System.Windows.Forms.Button buttonDecimal;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonSign;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonSub;
+        private System.Windows.Forms.Button buttonMul;
+        private System.Windows.Forms.Button buttonDiv;
+        private System.Windows.Forms.Button ButtonEuq;
     }
 }
 
